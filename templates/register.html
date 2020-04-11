@@ -1,0 +1,95 @@
+{% csrf_token %}
+{% load static %}
+{% csrf_token %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OneSchool &mdash; Website by Colorlib</title>
+	<style>
+        body
+        {
+            background-image: linear-gradient(to bottom right, #262503, #757571);
+            
+            padding-left:20%;
+            padding-right:20%;
+            font-weight:bold;
+            color:#f9d2a7;
+        }
+
+        input
+        {
+            border-radius:2vh;
+        }
+
+        #reg-form
+        {   
+            background-image: linear-gradient(to bottom right, #34023a, #f282e7);
+      
+           
+            text-align:center;
+            color:black;
+            width:60%;
+            color:#f9d2a7;
+        }
+
+	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div id="reg-form">
+    {% load crispy_forms_tags %}
+        <form id="" method='POST'> {% csrf_token %}
+
+        {{ form|crispy }}
+        {{ profile_form|crispy }}
+        <div class='form-group'>
+            <button type='submit' class='btn btn-outline-info'>Sign up</button>
+        </div>
+        </form>
+        <div class="border-top pt-3 ">
+        <small class="text-muted">Already have an account? <a class="ml-2" href="{% url 'login' %}">sign in</a>
+        </small></div>
+    </div>
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>
+

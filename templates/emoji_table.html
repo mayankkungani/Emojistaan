@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head><link rel="stylesheet" href="{% static 'font.css' %}"></head>
+		<style>
+		
+			body{
+				background-image: linear-gradient(to bottom right, #1b1023, purple);
+				text-align:center;
+			}
+			
+			table {
+			  font-family:serif;
+			  color:black;
+			  border-collapse: collapse;
+			  width: 90%;
+			  margin-left:5%;
+			  margin-right:5%;
+			  margin-top:1%;
+			  text-align:center;
+			}
+
+			td, th {
+			  border: 2px solid #000000;
+			  text-align: center;
+			  	font-size:3vh;
+			  padding: 4px;
+			}
+
+			tr{
+				height:10vh;
+				border: 2px solid #000000;
+				background-color: #ffc082;
+			  	text-align: center;
+				background-image: linear-gradient(to bottom right, #c4ae60, white);
+			}
+			
+			.categories
+			{
+				width:100%;
+				text-align:center;
+				background-color:;
+				margin-top:4%;
+				color:white;
+			}
+			
+		</style>
+		 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Muli:300,400,700,900' %}" rel="stylesheet">
+	
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<title>Emoji table</title>
+	</head>
+	
+	
+	<header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a style="color:#247d82;" href="{% static 'index.html' %}">Emojistaan</a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#faces" style="color:#247d82;"  class="nav-link">faces</a></li>
+                <li><a href="#general" style="color:#247d82;"  class="nav-link">general</a></li>
+                <li><a href="#people" style="color:#247d82;"  class="nav-link">people</a></li>
+                <li><a href="#sentences" style="color:#247d82;"  class="nav-link">Sentences</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+                <li class="cta"><a href="{% static '#' %}" onClick="login()" id="login" class="nav-link"><span>Log In</span></a></li>
+              </ul>
+            </nav>
+            <a href="{% static '#' %}" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+	<br>
+	<br>
+	<body>
+		<div class="categories" id="faces"><h1>FACES</h1></div>
+		<table border="1" cellpadding="1">
+			
+			<tr>
+				<th>Emoji</th>
+				<th>Meaning in English</th>
+				
+				<th>Meaning in Indian Sign Language</th>
+			</tr>
+			<tr>
+				<td>&#x1f600</td>
+				<td>Smile</td>
+				<td><img src="{% static 'images/smile' %}.png"></td>
+			</tr>
+			<tr>
+				<td>&#x1f601</td>
+				<td>Grinning Face</td>
+				<td><img src="{% static 'images/grin' %}.png"></td>
+			</tr>
+			<tr>
+				<td>&#x1f602</td>
+				<td>Laughing</td>
+				<td><img src="{% static 'images/laugh' %}.jfif"></td>
+			</tr>
+			
+			<tr>
+				<td>&#x1f619</td>
+				<td>Kissing face</td>
+				<td><img src="{% static 'images/kiss' %}.png"></td>
+
+			</tr>
+			
+			<tr>
+				<td>&#x1f61c</td>
+				<td>Teasing face</td>
+				<td><img src="{% static 'images/tease' %}.png"></td>
+
+			</tr>
+			<tr>
+				<td>&#x1f917</td>
+				<td>Hugging face</td>
+				<td><img src="{% static 'images/hug' %}.jpg"></td>
+			</tr>
+			<tr>
+				<td>&#x1f92b</td>
+				<td>Shushing Face</td>
+				<td><img src="{% static 'images/quiet' %}.png"></td>
+
+			</tr>
+			<tr>
+				<td>&#x1f914</td>
+				<td>Thinking Face</td>
+				<td><img src="{% static 'images/quiet' %}.png"></td>
+
+			</tr>
+			<tr>
+				<td>&#x1f634</td>
+				<td>Sleeping Face</td>
+				<td><img src="{% static 'images/quiet' %}.png"></td>
+
+			</tr>
+			<tr>
+				<td>&#x1f92f</td>
+				<td>Mind Blown</td>
+				<td><img src="{% static 'images/shocked1' %}.png"></td>
+
+			</tr>
+			<tr>
+				<td>&#x1f641</td>
+				<td>Sad Face</td>
+				<td><img src="{% static 'images/sad1' %}.png"></td>
+
+			</tr>
+			<tr>
+				<td>&#x1f632</td>
+				<td>Astonished Face</td>
+				<td><img src="{% static 'images/quiet' %}.png"></td>
+
+			</tr>
+			
+			<tr>
+				<td>&#x1f620</td>
+				<td>Angry Face</td>
+				<td><img src="{% static 'images/angry' %}.jpg"></td>
+			</tr>
+		</table>
+		
+		<div class="categories" id="general"><h1>GENERAL</h1></div>
+		<table border="1" cellpadding="1">
+		
+			<tr>
+				<td>&#x1F44C	</td>
+				<td>Ok</td>
+				<td><img src="{% static 'images/ok' %}.jpg"></td>
+			</tr>
+		
+			<tr>
+				<td>🤝</td>
+				<td>Handshake</td>
+				<td><img src="{% static 'images/meet' %}.jpg"></td>
+			</tr>
+		
+		</div>
+		</table>
+
+		<div class="categories" id="people"><h1>PEOPLE</h1></div>
+		<table border="1" cellpadding="1">
+			<tr>
+				<td>👶</td>
+				<td>Baby,child</td>
+				<td><img src="{% static 'images/baby' %}.jpg"></td>
+			</tr>
+			<tr>
+				<td>👦</td>
+				<td>Boy</td>
+				<td><img src="{% static 'images/boy' %}.jpg"></td>
+			</tr>
+			<tr>
+				<td>👧</td>
+				<td>Girl</td>
+				<td><img src="{% static 'images/girl' %}.jpg"></td>
+			</tr>
+			<tr>
+				<td>🧔</td>
+				<td>Man</td>
+				<td><img src="{% static 'images/man' %}.jpg"></td>
+			</tr>
+			<tr>
+				<td>👴</td>
+				<td>Old man</td>
+				<td><img src="{% static 'images/grandpa' %}.jpg"></td>
+			</tr>
+			<tr>
+				<td>👵</td>
+				<td>Old woman</td>
+				<td><img src="{% static 'images/grandma' %}.jpg"></td>
+			</tr>
+		
+			<tr>
+				<td>🙆</td>
+				<td>Ok</td>
+				<td><img src="{% static 'images/Ok' %}.jpg"></td>
+			</tr>
+			
+			
+		</table>
+		</div>
+		<div class="categories" id="sentences"><h1>sentences</h1></div>
+			<table border="1" cellpadding="1">
+				<tr>
+					<td> &#x1F44B &#x1F449 &#x1F914  </td>
+					<td>What is your name?</td>
+					<td><img src="{% static 'images/can(1)' %}.gif"></td>
+				</tr>
+
+				<tr>
+					<td> &#x1F44B &#x1F449 &#x1F914 &#x2753</td>
+					<td>hello,what is your name ?</td>
+					<td><img src="{% static 'images/can (2)' %}.gif"></td>
+				</tr>
+				<tr>
+					<td> &#x1F64F  &#x1F481	&#x1F449  &#x270e </td>
+					<td>Please give me your pen.</td>
+					<td><img src="{% static 'images/can (3)' %}.gif"></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

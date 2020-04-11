@@ -1,0 +1,325 @@
+{% csrf_token %}
+{% load static %}
+{% csrf_token %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OneSchool &mdash; Website by Colorlib</title>
+	<style>
+		#loggin-form{
+			display:none;
+			cursor:pointer;
+			z-index:6;
+		}
+		
+		#teach{
+			background-image: linear-gradient(to bottom right, #1b1023, purple);
+			height:100vh;
+			width:100vw;
+			padding:10vh;
+			margin-bottom:0px;
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+  justify-content: center;
+			}
+		
+		#teach-text{
+		
+			
+			
+		}
+		
+		#just{
+			display:block;
+			margin-top:20vh;
+			
+		}
+		
+		#practice
+		{
+			margin-top:0px;
+			background-image: linear-gradient(to bottom right, #041413, #08818e);
+			padding:10vh;
+		}
+		
+		#desc{
+		
+			padding:3vh;
+		
+		}
+		
+		#convertor
+		{
+			text-align:center;
+			margin-top:20vh;
+
+		}
+		
+		#convert-button
+		{
+			margin-left:5vw;
+			color:white;
+		}
+		
+		#textid
+		{
+			background-color:transparent;
+			border:none;
+			border-bottom:2px solid grey;
+			margin-left:5vw;
+			text-align:center;
+			color:white;
+			font-size:20px;
+		}
+		
+		#text-con
+		{
+			background-color:transparent;
+			border:none;
+			border-bottom:2px solid grey;
+			margin-left:5vw;
+			text-align:center;
+			color:white;
+		}
+		
+		#chat-form
+		{
+			margin-top:10vh;
+		}
+		
+		#chat-section
+		{
+			background-image: linear-gradient(to bottom right, #897814, #419112);
+			height:100%;
+			padding:10vh;
+			text-align:center;
+     
+		}
+		
+		#list
+		{
+      color:white;
+      text-align:left;
+		}
+
+    #inside
+    {
+       display:flex;
+      flex-direction:column;
+      align-items: center;
+  justify-content: center;
+    }
+
+	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="{% static 'index.html' %}">Emojistaan</a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="#teach" class="nav-link">Teaching</a></li>
+                <li><a href="#practice" class="nav-link">Practice</a></li>
+                <li><a href="#chat-section" class="nav-link">ChatPage</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+                <li class="cta"><a href="{% url 'login' %}" class="nav-link"><span>Log In</span></a></li>
+              </ul>
+            </nav>
+            <a href="{% static '#' %}" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-2" style="background-image: url('{% static 'images/two-boys.jpg' %}');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 align-items-center">
+              <div class="row align-items-center" style="text-align:center;">
+			  
+						<div id="desc">
+							<h1 style="font-weight:bold; text-align:left; color:#5a279e; text-shadow:2px 2px grey;"><br>What is Emojistaan?<br></h1><h3 style="color:white;text-shadow:2px 2px grey; font-weight:bold; text-align:left;">This is an messaging web application designed for chatting without the barriers of language. You can add friends and chat with them by sending emojies which will convert into text on their side. </h3>
+						</div>
+					
+                <div class="" id="just" style="ssz-index:2;">
+                  <h1  data-aos="fade-up" data-aos-delay="100">So what are you waiting for register now to start a new journey.</h1>
+                  <p data-aos="fade-up" data-aos-delay="300"><a href="{% url 'register_page' %}" class="btn btn-primary py-3 px-5 btn-pill">Register Now</a></p>
+
+                </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+      <div class="row mb-5 justify-content-center" id="teach">
+		<div class="col-lg-7 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title" style="color:white; fontr-size:5vh; font-weight:bold;">Every Emojy tells you something!</h2>
+            <h3>Here are some of the commonly used emojies with their respective meaning</h3>
+         </div>
+         <a href={% url 'tutorial' %}><button class="btn btn-outline-white" style="margin-top:1vh;"><h4><strong>LETS LEARN</strong></h4></button></a>
+   
+      </div>
+
+      <div id="practice">
+        <div class="row mb-3 justify-content-center" >
+          <div class="col-lg-8 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title" style="color:white">Practice Chat-Box</h2>
+            <h2>This is a place where you can practice with numerious emojies and learn their meaning. </h2>
+		   </div>
+        </div>
+		<div style="margin-top:15vh;">
+        <div class="row mb-5 align-items-center" >
+          <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'images/box-cheerful' %}.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-5 mr-auto order-2 order-lg-1" style="text-align:center;" data-aos="fade-up" data-aos-delay="200">
+            <p class="section-title" style="color:black; fontr-size:30vh; font-weight:bold;">Talk with emojies</p>
+            <h2 class="mb-8">You just have to type in the emojies that will be converted into text at the other side.</h2>
+
+          </div>
+        </div>
+
+        <div class="row mb-5 align-items-center">
+          <div class="col-lg-5 mb-7 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'images/emoticon-paper' %}.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-5 mr-auto order-2 order-lg-1" id="talk" style="text-align:center;" data-aos="fade-up" data-aos-delay="200">
+            <p class="section-title" style="color:black; fontr-size:30vh; font-weight:bold;">Talk with emojies</p>
+            <h2 class="mb-4">you can type the words and their emojy will appear on the other side.</h2>
+
+            </div>
+
+          </div>
+		 </div> 
+
+		<div id="convertor"> 
+		
+		 <p style="font-size:50px; font-weight:bold; color:yellow;"><b>Lets Practice</b></p>
+		  {% csrf_token %}
+			<form id="new" method="post" action="#talk">
+      {% csrf_token %}
+				<div id="chat-bottom" class="input-group">
+				
+					
+						<input style="width:65vh;" type="text"  name='text' id='text' class="btn btn-outline-info" placeholder="{{ text }}" ></input>
+						
+						<input type='submit' id="convert-button" class='btn btn-outline-info' value="Text To emoji"></input>
+
+						<div id="text-con" class="col-4 form-control" placeholder="emojies" style="font-size:25px;"> {{ name }}</div>
+			
+					  </ul>
+	
+				</div>
+			</form>
+		</div>
+
+    </div>
+		
+      </div>
+    <div class="site-section" id="chat-section">
+    <div class="container">
+
+        <div class="column justify-content-center text-center" id="inside">
+          <div class="col-lg-5 mb-5 text-center" >
+            <h1 class="section-title" style="text-shadow:3px 5px #7f8484;">The Chat Environment</h1>
+            <h2 style="color:white;"><br>The place where you can add friends , chat with them ,laugh with them.</h2>
+          </div>
+          <ol id="list" >
+            <li>Register in Emojistaan</li>
+            <li>Create username</li>
+            <li>Type-in emojies which will be converted into text at the other end.</li>
+            <li>Enjoy!</li>
+          </ol>
+        </div>
+        <a href="{% url 'chathome' %}"><button class="btn btn-outline-white" style="margin-top:1vh;"><h4><strong>LETS CHAT</strong></h4></button></a>
+      </div>
+   </div>
+
+    <div class="site-section bg-image overlay" style="background-image: url('{% static 'images/hero_1.jpg' %}');">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-8 text-center testimony">
+            <img src="{% static 'images/tony_robbins' %}.jfif" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+            <h3 class="mb-4">Tony Robbins</h3>
+            <blockquote>are all differ
+              <p>&ldquo; To effectively communicate, we must realize that we ent in the way we perceive the world and use this understanding as a guide to our communication with others.      &rdquo;</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div> <!-- .site-wrap -->
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>
